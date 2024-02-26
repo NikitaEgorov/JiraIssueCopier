@@ -1,0 +1,31 @@
+{
+    "action": {
+    },
+    "background": {
+       "service_worker": "background.js"
+    },
+    "commands": {
+       "copy-to-clipboard": {
+          "description": "Copy to clipboard"
+       }
+    },
+    "content_scripts": [ {
+       "js": [ "jira-copy.js" ],
+       "matches": [ "http://*/*", "https://*/*" ]
+    } ],
+    "icons": {
+       "128": "icons/512/icon_512_black.png",
+       "32": "icons/512/icon_512_black.png"
+    },
+    "description": "Adds a 'Copy' button to 'Browse' and 'Issues' Jira's pages",
+    "manifest_version": 3,
+    "name": "Jira Issue Copier",
+    "permissions": [],
+    "update_url": "https://clients2.google.com/service/update2/crx",
+    "version": "1.0.0",
+    "web_accessible_resources": [ {
+       "matches": [ "http://*/*", "https://*/*" ],
+       "resources": [ "jira-toast.js" ]
+    } ]
+ }
+ 
